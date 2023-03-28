@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
           sumPrice += quantity * unitPriceValue;
       });
 
-      totalQuantity.textContent = `Quantidade: ${sumQuantity}`;
+      totalQuantity.textContent = `Quantità: ${sumQuantity}`;
       totalPrice.textContent = `Total: € ${(unitPriceValue * sumQuantity).toFixed(2)}`;
   }
 
