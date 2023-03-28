@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const newTotalPrice = price * newQuantity;
 
                     itemQuantity.textContent = newQuantity;
-                    itemTotalPrice.textContent = `R$ ${newTotalPrice.toFixed(2)}`;
+                    itemTotalPrice.textContent = `€ ${newTotalPrice.toFixed(2)}`;
                 } else {
                     item = document.createElement('div');
                     item.setAttribute('data-id', `${modelName}-${colorText}-${sizeText}`);
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.appendChild(thumbnail);
 
                     // Adicionar o nome do modelo, cor e tamanho no resumo da compra
-                    item.innerHTML += ` ${modelName} - ${colorText} - ${sizeText} ${unitPrice} x <span class="item-quantity">${quantity}</span> <span class="item-total-price">R$ ${totalPrice.toFixed(2)}</span>`;
+                    item.innerHTML += ` ${modelName} - ${colorText} - ${sizeText} ${unitPrice} x <span class="item-quantity">${quantity}</span> <span class="item-total-price">€ ${totalPrice.toFixed(2)}</span>`;
                     const removeButton = document.createElement('button');
                     removeButton.textContent = 'x';
                     removeButton.addEventListener('click', removeItem);
@@ -259,7 +259,7 @@ function handleWhatsApp() {
   items.forEach((item, index) => {
     const modelName = item.textContent.split('-')[0].trim();
     const colorText = item.textContent.split('-')[1].trim();
-    const sizeText = item.textContent.split('-')[2].split('R$')[0].trim();
+    const sizeText = item.textContent.split('-')[2].split('€')[0].trim();
     const unitPrice = item.textContent.match(/R\$ [\d.]+/)[0];
     const quantity = item.querySelector('.item-quantity').textContent;
     const totalPrice = item.querySelector('.item-total-price').textContent;
