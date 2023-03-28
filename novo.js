@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const inputs = row.querySelectorAll('input[type="number"]');
       const totalQuantity = row.querySelector('.total-quantity');
       const totalPrice = row.querySelector('.total-price');
-      const unitPriceValue = parseFloat(unitPrice.textContent.replace('R$ ', ''));
+      const unitPriceValue = parseFloat(unitPrice.textContent.replace('€ ', ''));
 
       let sumQuantity = 0;
       let sumPrice = 0;
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       totalQuantity.textContent = `Quantidade: ${sumQuantity}`;
-      totalPrice.textContent = `Total: R$ ${(unitPriceValue * sumQuantity).toFixed(2)}`;
+      totalPrice.textContent = `Total: € ${(unitPriceValue * sumQuantity).toFixed(2)}`;
   }
 
   function handleCopy() {
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach((item, index) => {
       const modelName = item.textContent.split('-')[0].trim();
       const colorText = item.textContent.split('-')[1].trim();
-      const sizeText = item.textContent.split('-')[2].split('R$')[0].trim();
-      const unitPrice = item.textContent.match(/R\$ [\d.]+/)[0];
+      const sizeText = item.textContent.split('-')[2].split('€')[0].trim();
+      const unitPrice = item.textContent.match(/€\$ [\d.]+/)[0];
       const quantity = item.querySelector('.item-quantity').textContent;
       const totalPrice = item.querySelector('.item-total-price').textContent;
   
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function removeItem(e) {
       const item = e.target.parentElement;
-      const itemTotalPrice = parseFloat(item.querySelector('.item-total-price').textContent.replace('R$ ', ''));
+      const itemTotalPrice = parseFloat(item.querySelector('.item-total-price').textContent.replace('€ ', ''));
       const totalValue = document.querySelector('.total-value');
       const currentTotalValue = parseFloat(totalValue.textContent || '0');
       const newTotalValue = currentTotalValue - itemTotalPrice;
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const quantity = parseInt(input.value);
 
             if (quantity > 0) {
-                const price = parseFloat(unitPrice.replace('R$ ', ''));
+                const price = parseFloat(unitPrice.replace('€ ', ''));
                 const totalPrice = price * quantity;
 
                 let item = summaryContent.querySelector(`[data-id="${modelName}-${colorText}-${sizeText}"]`);
