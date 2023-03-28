@@ -260,7 +260,7 @@ function handleWhatsApp() {
     const modelName = item.textContent.split('-')[0].trim();
     const colorText = item.textContent.split('-')[1].trim();
     const sizeText = item.textContent.split('-')[2].split('€')[0].trim();
-    const unitPrice = item.textContent.match(/R\$ [\d.]+/)[0];
+    const unitPrice = item.textContent.match(/€\$ [\d.]+/)[0];
     const quantity = item.querySelector('.item-quantity').textContent;
     const totalPrice = item.querySelector('.item-total-price').textContent;
 
