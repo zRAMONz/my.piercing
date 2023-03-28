@@ -124,7 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const column = button.parentElement;
     const row = column.parentElement;
     const modelName = row.querySelector('p').textContent;
-    const unitPrice = row.querySelector('.unit-price').textContent;
+    const unitPrice = row.querySelector('.unit-price').textContent;const unitPrice = item.textContent.match(/€ [\d.]+/)[0];
+const quantity = item.querySelector('.item-quantity').textContent;
     const sizes = row.querySelectorAll('.size');
     const summaryContent = document.querySelector('.summary-content');
     const totalValue = document.querySelector('.total-value');
