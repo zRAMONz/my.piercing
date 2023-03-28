@@ -1,0 +1,304 @@
+/* styles.css */
+
+/* Reset básico de margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dffafa;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #dffafa; /* Cor principal da empresa */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Estilos da tabela flex */
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 100%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.silver {
+  background-color: #e5e5e5;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(0, 0, 0, 0.1));
+  border-radius: 2px;
+  border: rgb(0, 0, 0, 0.1) solid 1px;
+  border-color: rgb(0, 0, 0, 0.2);
+}
+
+.gold {
+  background-color: #ffdf83;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(0, 0, 0, 0.1));
+  border-radius: 2px;
+  border: rgb(0, 0, 0, 0.1) solid 1px;
+  border-color: rgb(0, 0, 0, 0.2);
+}
+
+.black {
+  background-color: #3a3a3a;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(0, 0, 0, 0.1));
+  border-radius: 2px;
+  border: rgb(0, 0, 0, 0.1) solid 1px;
+  border-color: rgb(0, 0, 0, 0.2);
+}
+
+.size {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left; /* Adicione esta linha */
+}
+
+input[type="number"] {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.add-to-cart {
+  width: 40px;
+  height: 30px;
+  background-color: #1AA5A5;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(0, 0, 0, 0.1));
+  border-radius: 2px;
+  border: rgb(0, 0, 0, 0.1) solid 1px;
+  border-color: rgb(0, 0, 0, 0.2);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+}
+
+/* Estilos do resumo da compra */
+.summary {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.total {
+  font-weight: bold;
+  color: #1AA5A5;
+}
+
+.unit-price {
+  font-weight: bold;
+  color: #1AA5A5;
+}
+
+.total-price {
+  font-weight: bold;
+  color: #1AA5A5;
+}
+
+.copy {
+  width: 100px;
+  height: 30px;
+  background-color: #1AA5A5;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(0, 0, 0, 0.1));
+  border-radius: 2px;
+  border: rgb(0, 0, 0, 0.1) solid 1px;
+  border-color: rgb(0, 0, 0, 0.2);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+}
+
+.color[selected] {
+  box-shadow: 0 0 0 3px #1AA5A5; /* Borda externa */
+  border-radius: 10%;
+}
+
+/* Posicionar a mensagem "Adicionado" no canto superior esquerdo da linha */
+.row {
+  position: relative; /* Adicione esta linha */
+}
+
+.added-message {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #28a745;
+  opacity: 0;
+}
+
+/* Exibir a miniatura da foto do produto no resumo da compra */
+.summary-content img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.reset-text {
+  animation: resetText 0.01s;
+}
+
+@keyframes resetText {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.column:last-child {
+  min-width: 200px;
+}
+@media screen and (max-width: 600px) {
+  .row {
+      font-size: 0.8em;
+  }
+  .column:last-child {
+      min-width: 100px;
+  }
+  img {
+      width: 80px;
+      height: 80px;
+  }
+  .color {
+      width: 24px;
+      height: 24px;
+  }
+  input[type="number"] {
+      width: 40px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dffafa;
+  padding: 20px;
+  overflow-x: hidden; /* Adicione esta linha */
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%; /* Adicione esta linha */
+  max-width: 100%; /* Adicione esta linha */
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+      font-size: 0.8em;
+      padding: 12px; /* Adicione esta linha */
+  }
+  .column:last-child {
+      min-width: 105px; /* Altere para 130px */
+  }
+  img {
+      width: 70px; /* Altere para 70px */
+      height: 70px; /* Altere para 70px */
+  }
+  .color {
+      width: 20px; /* Altere para 20px */
+      height: 30px; /* Altere para 20px */
+  }
+  input[type="number"] {
+      width: 35px; /* Altere para 35px */
+  }
+}
+.color-price {
+  min-height: 60px; /* Adicione esta linha */
+  min-width: 105px;
+}
+.copy + .copy {
+  margin-left: 10px;
+}
+
+.reset-unit-price .unit-price {
+  display: none;
+}
+.size p {
+  font-size: 0.9em; /* Adicione esta linha */
+}
+input[type="number"] {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: right; /* Altere esta linha */
+}
+
+.row.header {
+  font-weight: bold;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.choose-color {
+  grid-column: span 2; /* Adicione esta linha */
+}
+
+.measurements {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPiercing</title>
+    <link rel="stylesheet" href="novo.css">
+    <style>
+        .italian-flag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 20px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/640px-Flag_of_Italy.svg.png');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="italian-flag"></div>
+    <h1>MyPiercing</h1>
+    <div class="table">
+        <div class="row">
+            <div class="column">
+                <button class="color silver" data-price="€ 4.50" aria-label="Naturale"></button>
+                <button class="color gold" data-price="€ 5.50" aria-label="Oro"></button>
+                <button class="color black" data-price="€ 6.00" aria-label="Nero"></button>
+            </div>
+            <div class="column">
+                <img src="https://cdn.awsli.com.br/1000x1000/1130/1130778/produto/160260706/4e1b394f47.jpg" alt="Ferradura">
+                <p>Ferradura</p>
+            </div>
+            <div class="column measurements">
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x6</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x8</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x10</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x12</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="color-price">
+                    <p>N: € 4.50</p>
+                    <p>G: € 5.50</p>
+                    <p>B: € 6.00</p>
+                </div>
+                <p class="unit-price"></p>
+                <p class="total-quantity"></p>
+                <p class="total-price"></p>
+                <button class="add-to-cart">+</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <button class="color silver" data-price="€ 4.50" aria-label="Naturale"></button>
+                <button class="color gold" data-price="€ 5.50" aria-label="Oro"></button>
+                <button class="color black" data-price="€ 6.00" aria-label="Nero"></button>
+            </div>
+            <div class="column">
+                <img src="https://cdn.awsli.com.br/1000x1000/1130/1130778/produto/183111998/a914bda375.jpg" alt="Captive">
+                <p>Captive</p>
+            </div>
+            <div class="column measurements">
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x6</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x8</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x10</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x12</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="color-price">
+                    <p>N: € 4.50</p>
+                    <p>G: € 5.50</p>
+                    <p>B: € 6.00</p>
+                </div>
+                <p class="unit-price"></p>
+                <p class="total-quantity"></p>
+                <p class="total-price"></p>
+                <button class="add-to-cart">+</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <button class="color silver" data-price="€ 4.50" aria-label="Naturale"></button>
+                <button class="color gold" data-price="€ 5.50" aria-label="Oro"></button>
+                <button class="color black" data-price="€ 6.00" aria-label="Nero"></button>
+            </div>
+            <div class="column">
+                <img src="https://cdn.awsli.com.br/1000x1000/1130/1130778/produto/193337719/sem-titulo-1-gpnxra.jpg" alt="Labret">
+                <p>Labret</p>
+            </div>
+            <div class="column measurements">
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x6</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x8</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x10</p>
+                </div>
+                <div class="size">
+                    <input type="number" value="0" min="0">
+                    <p>1.2x12</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="color-price">
+                    <p>N: € 4.50</p>
+                    <p>G: € 5.50</p>
+                    <p>B: € 6.00</p>
+                </div>
+                <p class="unit-price"></p>
+                <p class="total-quantity"></p>
+                <p class="total-price"></p>
+                <button class="add-to-cart">+</button>
+            </div>
+        </div>
+        <div class="summary">
+            <h2>Riepilogo dell'acquisto</h2>
+            <div class="summary-content">
+                <!-- Gli articoli aggiunti al carrello verranno visualizzati qui -->
+            </div>
+            <p class="total">Totale dell'acquisto: <span class="total-value"></span></p>
+            <button class="copy">Copia</button>
+            <button class="whatsapp copy">WhatsApp</button>
+        </div>
+        <script src="novo.js"></script>
+    </body>
+</html>
