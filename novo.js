@@ -120,32 +120,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function handleAddToCart(e) {
-        function handleAddToCart(e) {
-            const button = e.target;
-            const column = button.parentElement;
-            const row = column.parentElement;
-            const modelName = row.querySelector('p').textContent;
-            const unitPrice = row.querySelector('.unit-price').textContent;
-            const sizes = row.querySelectorAll('.size');
-            const summaryContent = document.querySelector('.summary-content');
-            const totalValue = document.querySelector('.total-value');
-        
-            const colors = row.querySelectorAll('.silver[selected], .gold[selected], .black[selected]');
-        
-            // Função para exibir a mensagem "Adicionado"
-            function showAddedMessage() {
-              let addedMessage = row.querySelector('.added-message');
-        
-              if (addedMessage) {
-                addedMessage.style.opacity = 1;
-              } else {
-                addedMessage = document.createElement('span');
-                addedMessage.textContent = 'Aggiunto';
-                addedMessage.classList.add('added-message');
-                row.appendChild(addedMessage);
-                addedMessage.style.opacity = 1;
-              }
-            }
+        const button = e.target;
+        const column = button.parentElement;
+        const row = column.parentElement;
+        const modelName = row.querySelector('p').textContent;
+        const unitPrice = row.querySelector('.unit-price').textContent;
+        const sizes = row.querySelectorAll('.size');
+        const summaryContent = document.querySelector('.summary-content');
+        const totalValue = document.querySelector('.total-value');
+      
+        const colors = row.querySelectorAll('.silver[selected], .gold[selected], .black[selected]');
+      
+        // Função para exibir a mensagem "Adicionado"
+        function showAddedMessage() {
+          let addedMessage = row.querySelector('.added-message');
+      
+          if (addedMessage) {
+            addedMessage.style.opacity = 1;
+          } else {
+            addedMessage = document.createElement('span');
+            addedMessage.textContent = 'Aggiunto';
+            addedMessage.classList.add('added-message');
+            row.appendChild(addedMessage);
+            addedMessage.style.opacity = 1;
+          }
+        }
+      
         
             colors.forEach(color => {
               const colorText = color ? color.getAttribute('aria-label') : '';
