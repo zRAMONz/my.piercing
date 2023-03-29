@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const thumbnail = row.querySelector('img').cloneNode();
                     item.appendChild(thumbnail);
         
-                    // Adicionar o nome do modelo, cor e tamanho no resumo da compra
+                    //  Adicionar o nome do modelo, cor e tamanho no resumo da compra
                     item.innerHTML += ` ${modelName} - ${colorText} - ${sizeText} ${unitPrice} x <span class="item-quantity">${quantity}</span> <span class="item-total-price">€ ${totalPrice.toFixed(2)}</span>`;
                     const removeButton = document.createElement('button');
                     removeButton.textContent = 'x';
