@@ -232,21 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
               row.classList.remove('reset-text');
             }, { once: true });
         
-            // Exibir a mensagem "Adicionado" no canto superior esquerdo da linha
-            function showAddedMessage() {
-                let addedMessage = row.querySelector('.added-message');
-          
-                if (addedMessage) {
-                  addedMessage.style.opacity = 1;
-                } else {
-                  addedMessage = document.createElement('span');
-                  addedMessage.textContent = 'Adicionado';
-                  addedMessage.classList.add('added-message');
-                  row.appendChild(addedMessage);
-                  addedMessage.style.opacity = 1;
-                }
-              }
-            }
+
           
             const whatsappButton = document.querySelector('.whatsapp');
             whatsappButton.addEventListener('click', handleWhatsApp);
