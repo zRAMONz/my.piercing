@@ -268,4 +268,4 @@ document.addEventListener('DOMContentLoaded', () => {
               // Abrir o link do WhatsApp em uma nova janela
               window.open(whatsappUrl, '_blank');
             }
-          }})
+          })
