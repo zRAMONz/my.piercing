@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
               totalPrice.textContent = '';
               row.classList.remove('reset-text');
             }, { once: true });
-        
+                    }
           
             const whatsappButton = document.querySelector('.whatsapp');
             whatsappButton.addEventListener('click', handleWhatsApp);
